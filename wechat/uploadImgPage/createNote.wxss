@@ -1,0 +1,54 @@
+.container {
+  min-height: 100vh;
+  padding: 40rpx;
+}
+.pictureExam {
+  padding: 20rpx;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px #dddddd;
+}
+.title-content {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid #dddddd;
+}
+.remark-view {
+  margin-top: 30rpx;
+}
+.remark-view .remark-tips {
+  text-align: right;
+}
+.upload-img-view {
+  margin-top: 40rpx;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px #dddddd;
+}
+.upload-img-view .images-list {
+  display: flex;
+  justify-content: space-around;
+}
+.upload-img-view .image-item {
+  display: flex;
+  flex-direction: column;
+}
+.upload-img-view .image-item .image {
+  width: 99%;
+}
+.upload-img-view .image-item .del-btn {
+  font-size: 28rpx;
+  background: #ffffff;
+  border-radius: 40rpx;
+  margin: 20rpx 0;
+  box-shadow: 0px 0px 5px #dddddd;
+}
+.btn-area {
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.btn-area .btn-item {
+  width: 40%;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px #dddddd;
+}

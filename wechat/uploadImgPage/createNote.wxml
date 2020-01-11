@@ -1,0 +1,33 @@
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="pictureExam">
+      <!-- 题目 -->
+      <view class="section title-content">
+        <input class="title" name="name" placeholder="请输入题目" maxlength="{{maxTitleNum}}" bindinput="handleTitleInput"></input>
+        <text class="title-tips">{{titleNum}}/{{maxTitleNum}}</text>
+      </view>
+      <!-- 备注 -->
+      <view class="section remark-view">
+        <textarea class="remark" name="remark" placeholder="请输入备注" maxlength="{{maxContentNum}}" bindinput="handleContentInput" />
+        <view class="remark-tips">{{contentNum}}/{{maxContentNum}}</view>
+      </view>
+    </view>
+    <!-- 上传图片 -->
+    <view class="upload-img-view">
+      <button bindtap="chooseImage" wx:if="{{images.length < 3}}">添加图片</button>
+      <view class="images-list">
+        <block wx:for="{{images}}" wx:key="{{index}}">
+          <view class="image-item">
+            <image src="{{item}}" class="image" mode="widthFix" data-index="{{index}}" bindtap="blowUpImage"></image>
+            <button class="del-btn" data-index="{{index}}" bindtap="removeImage">删除</button>
+          </view>
+        </block>
+      </view>
+    </view>
+    <!-- 上传按钮 -->
+    <view class="btn-area">
+      <button form-type="submit" class="btn-item">提交</button>
+      <button form-type="reset" class="btn-item">重置</button>
+    </view>
+  </form>
+</view>
