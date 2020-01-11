@@ -84,11 +84,13 @@
       window.onload = function() {
         // 阻力
         const drag = 10;
+        // 滚动位置
+        const location = 0;
         // 滑动到顶部方法
         function scrollToTop() {
           const gap =
             document.documentElement.scrollTop || document.body.scrollTop;
-          if (gap > 0) {
+          if (gap > location) {
             window.requestAnimationFrame(scrollToTop);
             window.scrollTo(0, gap - gap / drag);
           }
